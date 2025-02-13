@@ -22,9 +22,6 @@ def add(inpStr: str) -> int:
     
     numValues = list(map(lambda x: int(x), number_list) )
 
-
-    # inpStr = inpStr.replace('\n', delimiter)
-    # inpStr = inpStr.split(delimiter)
     negatives = [num for num in numValues if num < 0]
     if negatives:
         raise ValueError(f"Negative numbers are not allowed {negatives}")
