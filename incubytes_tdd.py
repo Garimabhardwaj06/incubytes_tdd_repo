@@ -28,9 +28,9 @@ def add(inpStr: str) -> int:
     negatives = [num for num in numValues if num < 0]
     if negatives:
         raise ValueError(f"Negative numbers are not allowed {negatives}")
-    sumValue = reduce(lambda x,y: x+y, map(lambda x: int(x),numValues) )
+    
+    sumValue = reduce(lambda x,y: x+y if y <=1000 else x,numValues,0)
     return sumValue
 
-
-outValue = add("//[***]\n1***-2000***3")
+outValue = add("//[***]\n1***2000***3")
 print(f'sum value is ------------>{outValue}')
